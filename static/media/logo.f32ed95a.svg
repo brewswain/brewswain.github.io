@@ -1,0 +1,10 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="320" height="320" fill="white"/>
+<rect width="320" height="320" fill="#6563B6" className="logo__background"/>
+<rect x="48" y="111" width="45" height="162" fill="black"/>
+<rect x="115" y="52" width="45" height="162" fill="black"/>
+<rect x="116" y="273" width="45" height="113" transform="rotate(-90 116 273)" fill="black"/>
+<rect x="181" y="214" width="45" height="81" transform="rotate(-90 181 214)" fill="black"/>
+<rect x="181" y="97" width="45" height="81" transform="rotate(-90 181 97)" fill="black"/>
+<rect x="182" y="144" width="21" height="55" transform="rotate(-90 182 144)" fill="black"/>
+</svg>
