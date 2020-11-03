@@ -2,7 +2,7 @@
   "name": "portfolio_2020",
   "version": "0.1.0",
   "private": true,
-  "homepage":"http://brewswain.github.io/portfolio_2020",
+  "homepage":"http://brewswain.github.io",
 
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
