@@ -37,9 +37,6 @@ const ProjectDetailsPage = () => {
   let filteredProject = ProjectDetails.filter(
     (project) => project.id === chosenProject
   );
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   useEffect(() => {
     setIsHomePage(false);

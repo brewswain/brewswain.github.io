@@ -52,6 +52,7 @@ const ProjectSection = () => {
                   className="project__link"
                   onClick={() => {
                     setSelectedProject(project.id);
+                    window.scrollTo(0, 0);
                     setIsHomePage(false);
                     window.localStorage.setItem("storedProject", project.id);
                   }}
