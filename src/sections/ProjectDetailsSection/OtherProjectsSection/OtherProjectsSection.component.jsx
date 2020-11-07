@@ -9,22 +9,27 @@ import { ImageLoader } from "../../../components";
 
 import ProjectSummary from "../../../data/ProjectSummary.data";
 
-const OtherProjectsSection = () => {
+const OtherProjectsSection = ({ filteredProject }) => {
   const { selectedProject, setSelectedProject } = useContext(ProjectContext);
-  const { projectState } = useContext(SelectedProjectContext);
+  const { projectState, setProjectState } = useContext(SelectedProjectContext);
 
   let availableProjects = ProjectSummary.filter(
-    (project) => project.id !== projectState
+    (project) => project.id !== filteredProject
   );
+  console.log(projectState);
+  console.log(availableProjects);
+  console.log(filteredProject);
 
   useEffect(() => {
     const storedProject = window.localStorage.getItem("storedProject");
+    setProjectState(selectedProject);
 
     if (!storedProject) {
       window.localStorage.setItem("storedProject", selectedProject);
     }
   }, [selectedProject]);
 
+  useEffect(() => {});
   return (
     <section className="projects__feed" id="projects">
       {availableProjects.map((project) => (
@@ -44,8 +49,8 @@ const OtherProjectsSection = () => {
               className="project__link"
               onClick={() => {
                 setSelectedProject(project.title);
-                window.localStorage.setItem("storedProject", project.id);
                 window.scrollTo(0, 0);
+                window.localStorage.setItem("storedProject", selectedProject);
               }}
             >
               View Details

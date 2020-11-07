@@ -39,10 +39,6 @@ const ProjectDetailsPage = () => {
   );
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
     setIsHomePage(false);
   }, [setIsHomePage]);
 
@@ -75,7 +71,7 @@ sideBarContext.setIsVisible(false);
           </div>
           <ProblemsSection project={filteredProject[0]} />
           <LessonsSection project={filteredProject[0]} />
-          <OtherProjectsSection />
+          <OtherProjectsSection filteredProject={filteredProject[0].id} />
           <ContactSection />{" "}
         </>
       ) : null}

@@ -13,7 +13,7 @@ import {
 const App = () => {
   const [isHomePage, setIsHomePage] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [selectedProject, setSelectedProject] = useState("queeery");
+  const [selectedProject, setSelectedProject] = useState(null);
   const [projectState, setProjectState] = useState(null);
 
   const storedProject = window.localStorage.getItem("storedProject");

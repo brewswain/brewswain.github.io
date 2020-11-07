@@ -5,8 +5,6 @@ import "./ImageLoader.style.scss";
 const ImageLoader = ({ className, src }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  console.log(isLoaded);
-
   useEffect(() => {
     src && setIsLoaded(true);
   }, [src]);
