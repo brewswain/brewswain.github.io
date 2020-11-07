@@ -7,6 +7,7 @@ import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 
 import { NavBarContext, ProjectContext } from "../../../contexts";
+import { ImageLoader } from "../../../components";
 
 import ProjectSummary from "../../../data/ProjectSummary.data";
 import ProjectUpcoming from "../../../data/ProjectUpcoming.data";
@@ -38,7 +39,7 @@ const ProjectSection = () => {
                 ) : null}
               </div>
               <LazyLoad debounce={false} offsetVertical={500}>
-                <img
+                <ImageLoader
                   src={project.imageUrl}
                   alt="Project Thumbnail"
                   className="project__image"
@@ -68,7 +69,7 @@ const ProjectSection = () => {
         <div className="projects__upcoming">
           <div className="placeholder__project">
             <LazyLoad debounce={false} offsetVertical={500}>
-              <img
+              <ImageLoader
                 className="browser__screenshot
       "
                 src={upcomingImageUrl}

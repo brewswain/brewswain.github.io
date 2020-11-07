@@ -1,4 +1,12 @@
 .image {
+  &__loader {
+    width: 650px;
+  }
+  &__hero {
+    &__loader {
+      width: 800px;
+    }
+  }
   &--loading {
     opacity: 0;
     width: 100%;

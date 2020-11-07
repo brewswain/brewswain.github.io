@@ -3,9 +3,9 @@ import React, { useContext, useEffect } from "react";
 import "./OtherProjectsSection.style.scss";
 
 import { Link } from "react-router-dom";
-import LazyLoad from "react-lazy-load";
 
 import { ProjectContext, SelectedProjectContext } from "../../../contexts";
+import { ImageLoader } from "../../../components";
 
 import ProjectSummary from "../../../data/ProjectSummary.data";
 
@@ -32,7 +32,11 @@ const OtherProjectsSection = () => {
           <div className="project__header">
             <div className="project__title">{project.title}</div>
           </div>
-          <img src={project.imageUrl} alt="hi :)" className="project__image" />{" "}
+          <ImageLoader
+            src={project.imageUrl}
+            alt="Project Thumbnail"
+            className="project__image"
+          />{" "}
           <div className="project__description">{project.description}</div>
           <div className="link__container">
             <Link

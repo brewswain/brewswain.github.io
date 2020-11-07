@@ -81,6 +81,7 @@
           flex-direction: column;
           align-items: center;
           width: inherit;
+          padding-left: 0;
         }
       }
 
@@ -159,6 +160,13 @@
         &__container {
           display: none;
         }
+      }
+    }
+
+    .image {
+      &__loader,
+      &__image__loader {
+        display: none;
       }
     }
 

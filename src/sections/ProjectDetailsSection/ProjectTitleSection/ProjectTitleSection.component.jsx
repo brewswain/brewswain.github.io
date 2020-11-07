@@ -74,7 +74,11 @@ const ProjectTitleSection = ({
       </div>
 
       {fullPageScreenshotUrl && (
-        <LazyLoad debounce={false} offsetVertical={500}>
+        <LazyLoad
+          debounce={false}
+          offsetVertical={500}
+          className="image__loader"
+        >
           <ImageLoader
             src={fullPageScreenshotUrl}
             alt="Fullpage screenshot"
@@ -84,8 +88,12 @@ const ProjectTitleSection = ({
       )}
       <div className="project__hero__container">
         {heroPicUrl_1 && (
-          <LazyLoad debounce={false} offsetVertical={500}>
-            <img
+          <LazyLoad
+            debounce={false}
+            offsetVertical={500}
+            className="image__hero__loader"
+          >
+            <ImageLoader
               src={heroPicUrl_1}
               alt="Hero Pic screenshot"
               className="project__title__hero"
@@ -93,8 +101,12 @@ const ProjectTitleSection = ({
           </LazyLoad>
         )}
         {heroPicUrl_2 && (
-          <LazyLoad debounce={false} offsetVertical={500}>
-            <img
+          <LazyLoad
+            debounce={false}
+            offsetVertical={500}
+            className="image__hero__loader"
+          >
+            <ImageLoader
               src={heroPicUrl_2}
               alt="Hero Pic screenshot"
               className="project__title__hero"

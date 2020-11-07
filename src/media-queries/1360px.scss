@@ -58,6 +58,12 @@
 
     // ----------------------------------------------------- ProjectDetails view ----------------------------------------------------- //
     .project {
+      &__section {
+        &__container {
+          padding-left: 2rem;
+        }
+      }
+
       &__introduction {
         display: flex;
         justify-content: center;
@@ -74,14 +80,24 @@
         }
 
         &__screenshot {
-          width: 500px;
+          width: 450px;
           margin-left: 0;
         }
 
         &__hero {
-          width: 600px;
-          height: 390px;
+          width: 450px;
+          height: 290px;
           margin-bottom: 3rem;
+        }
+      }
+    }
+    .image {
+      &__loader {
+        width: 100%;
+      }
+      &__hero {
+        &__loader {
+          width: 100%;
         }
       }
     }
