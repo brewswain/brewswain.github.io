@@ -40,13 +40,12 @@ const OtherProjectsSection = () => {
           <div className="project__description">{project.description}</div>
           <div className="link__container">
             <Link
-              to="/projects"
+              to={`/projects/${project.id}`}
               className="project__link"
               onClick={() => {
                 setSelectedProject(project.title);
                 window.localStorage.setItem("storedProject", project.id);
                 window.scrollTo(0, 0);
-                window.location.reload();
               }}
             >
               View Details
