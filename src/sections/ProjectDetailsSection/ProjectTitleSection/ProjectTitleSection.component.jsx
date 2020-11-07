@@ -2,6 +2,9 @@ import React from "react";
 
 import "./ProjectTitleSection.style.scss";
 
+import LazyLoad from "react-lazy-load";
+import { ImageLoader } from "../../../components";
+
 const ProjectTitleSection = ({
   project: {
     demoUrl,
@@ -69,27 +72,34 @@ const ProjectTitleSection = ({
           </div>
         </div>
       </div>
+
       {fullPageScreenshotUrl && (
-        <img
-          src={fullPageScreenshotUrl}
-          alt="Fullpage screenshot"
-          className="project__title__screenshot"
-        />
+        <LazyLoad debounce={false} offsetVertical={500}>
+          <ImageLoader
+            src={fullPageScreenshotUrl}
+            alt="Fullpage screenshot"
+            className="project__title__screenshot"
+          />
+        </LazyLoad>
       )}
       <div className="project__hero__container">
         {heroPicUrl_1 && (
-          <img
-            src={heroPicUrl_1}
-            alt="Hero Pic screenshot"
-            className="project__title__hero"
-          />
+          <LazyLoad debounce={false} offsetVertical={500}>
+            <img
+              src={heroPicUrl_1}
+              alt="Hero Pic screenshot"
+              className="project__title__hero"
+            />
+          </LazyLoad>
         )}
         {heroPicUrl_2 && (
-          <img
-            src={heroPicUrl_2}
-            alt="Hero Pic screenshot"
-            className="project__title__hero"
-          />
+          <LazyLoad debounce={false} offsetVertical={500}>
+            <img
+              src={heroPicUrl_2}
+              alt="Hero Pic screenshot"
+              className="project__title__hero"
+            />
+          </LazyLoad>
         )}
       </div>
     </section>

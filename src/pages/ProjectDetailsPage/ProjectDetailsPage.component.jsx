@@ -3,10 +3,13 @@ import React, { useContext, useEffect } from "react";
 import "./ProjectDetailsPage.style.scss";
 
 import { useLocation } from "react-router-dom";
+import LazyLoad from "react-lazy-load";
 
 import { NavBar, SideBar } from "../../partials";
 
 import ProjectDetails from "../../data/ProjectDetails.data";
+
+import { ImageLoader } from "../../components";
 
 import {
   NavBarContext,
@@ -50,7 +53,6 @@ const ProjectDetailsPage = () => {
     <div className="details__page">
       <NavBar />
       <SideBar />
-      {/* <img src="https://placekitten.com/g/1080/1920" alt=""  /> */}
       {/* TODO:   Implement OnBlur as shown below   
 
 onClick={() => {
@@ -62,12 +64,14 @@ sideBarContext.setIsVisible(false);
           <JustificationSection project={filteredProject[0]} />
           <StackSection project={filteredProject[0]} />
           <div className="image__container">
-            <img
-              className="browser__screenshot
+            <LazyLoad debounce={false} offsetVertical={500}>
+              <ImageLoader
+                className="browser__screenshot
       "
-              src={filteredProject[0].homePagePic}
-              alt="Single View pic"
-            />
+                src={filteredProject[0].homePagePic}
+                alt="Single View pic"
+              />
+            </LazyLoad>
           </div>
           <ProblemsSection project={filteredProject[0]} />
           <LessonsSection project={filteredProject[0]} />

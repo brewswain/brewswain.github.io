@@ -3,12 +3,13 @@ import React, { useContext } from "react";
 import "./ProjectSection.style.scss";
 import GitHubLogo from "../../../assets/PNG/github_Light.png";
 
+import LazyLoad from "react-lazy-load";
+import { Link } from "react-router-dom";
+
 import { NavBarContext, ProjectContext } from "../../../contexts";
 
 import ProjectSummary from "../../../data/ProjectSummary.data";
 import ProjectUpcoming from "../../../data/ProjectUpcoming.data";
-
-import { Link } from "react-router-dom";
 
 import { TerminalIcon } from "../../../assets";
 
@@ -20,7 +21,6 @@ const ProjectSection = () => {
   return (
     <section className="section__projects" id="projects">
       <div className="projects__container">
-        {/* <CompletedProjects /> */}
         <h1 className="section__header">What I've done so far</h1>
         <div className="projects__grid">
           {ProjectSummary.map((project) => (
@@ -37,11 +37,13 @@ const ProjectSection = () => {
                   </a>
                 ) : null}
               </div>
-              <img
-                src={project.imageUrl}
-                alt="hi :)"
-                className="project__image"
-              />
+              <LazyLoad debounce={false} offsetVertical={500}>
+                <img
+                  src={project.imageUrl}
+                  alt="Project Thumbnail"
+                  className="project__image"
+                />
+              </LazyLoad>
               <div className="project__description">{project.description}</div>
               <div className="link__container">
                 <Link
@@ -65,12 +67,14 @@ const ProjectSection = () => {
         <h1 className="section__header">What I'm working on</h1>
         <div className="projects__upcoming">
           <div className="placeholder__project">
-            <img
-              className="browser__screenshot
+            <LazyLoad debounce={false} offsetVertical={500}>
+              <img
+                className="browser__screenshot
       "
-              src={upcomingImageUrl}
-              alt="Single View pic"
-            />
+                src={upcomingImageUrl}
+                alt="Upcoming Project thumbnail"
+              />
+            </LazyLoad>
             <div className="project__description">{upcomingDescription}</div>
           </div>
         </div>
