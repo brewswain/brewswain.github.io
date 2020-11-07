@@ -71,7 +71,7 @@ sideBarContext.setIsVisible(false);
           </div>
           <ProblemsSection project={filteredProject[0]} />
           <LessonsSection project={filteredProject[0]} />
-          <OtherProjectsSection filteredProject={filteredProject.id} />
+          <OtherProjectsSection filteredProject={filteredProject[0].id} />
           <ContactSection />{" "}
         </>
       ) : null}
