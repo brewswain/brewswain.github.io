@@ -16,9 +16,6 @@ const OtherProjectsSection = ({ filteredProject }) => {
   let availableProjects = ProjectSummary.filter(
     (project) => project.id !== filteredProject
   );
-  console.log(projectState);
-  console.log(availableProjects);
-  console.log(filteredProject);
 
   useEffect(() => {
     const storedProject = window.localStorage.getItem("storedProject");
