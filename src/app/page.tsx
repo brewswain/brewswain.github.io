@@ -92,9 +92,9 @@ export default function LandingPage() {
                   Who We Are
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  We're a software engineering consultancy with expertise in
-                  building scalable applications and solving complex technical
-                  challenges.
+                  We&apos;re a software engineering consultancy with expertise
+                  in building scalable applications and solving complex
+                  technical challenges.
                 </p>
               </div>
             </div>
@@ -157,7 +157,7 @@ export default function LandingPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
-                  Let's Work Together
+                  Let&apos;s Work Together
                 </h2>
                 <p className="max-w-[600px] text-emerald-50 md:text-xl">
                   Have a project in mind or need technical expertise? Get in
